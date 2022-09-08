@@ -1,0 +1,57 @@
+.clients_Container
+{
+    width: 90%;
+    height: 90vh;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.clients_Container h1{
+    color: var(--bg-color);
+    font-family: var(--inter);
+    font-size: 20px;
+    width: 60px;
+    border-bottom: 3px solid var(--bg-color);
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.clients_Container > p{
+    font-size: 40px;
+    font-weight: 600;
+    width: 200px;
+    font-family: (--inter);
+    margin-bottom: 120px;
+}
+
+.Company_Detail_Container
+{
+    width: 85%;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.Box_Container
+{
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Box_Container > img
+{
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+}
+
+.Box_Container p
+{
+    font-weight: bolder;
+    font-family: var(--inter);
+    text-transform:capitalize  ;
+}

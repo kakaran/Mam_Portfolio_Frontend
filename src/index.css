@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap');
+
 *{
   padding: 0;
   margin: 0;
   list-style: none;
+  font-family: var(--Crimson-Pro);
 }
+
+
+:root
+{
+  --bg-color : #8644DC;
+  --second-bg-color : #E3FBED;
+  --Crimson-Pro :  'Crimson Pro', serif;
+  --inter : 'Inter', sans-serif;
+}
+

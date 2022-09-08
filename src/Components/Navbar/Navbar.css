@@ -1,0 +1,43 @@
+.navbar_Container
+{
+    display: flex;
+    gap: 100px;
+    padding: 40px 80px;
+    background-color: transparent;
+}
+
+.navbar_links   
+{
+    display: flex;
+    gap: 40px;
+}
+
+.navbar_links a 
+{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.active
+{
+    font-weight: 800;
+}
+
+.second_navbar_hamburger
+{
+    position: absolute;
+    right : 70px;
+    top : 22px;
+    color: black;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: var(--second-bg-color) 0px 14px 28px, var(--second-bg-color) 0px 30px 30px;
+    display: none;
+}
+
+/* ================================== MAX-WIDTH : 600px=================================== */
+
+@media (max-width : 600px) {
+    
+}

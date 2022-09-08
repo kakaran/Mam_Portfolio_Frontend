@@ -1,0 +1,48 @@
+.info_Container
+{
+    border: 1px solid black;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.info_textData
+{
+    border: 1px solid black;
+    width: 90%;
+    height: 50vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px
+}
+
+
+.info_textData h5{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: var(--Crimson-Pro);
+}
+
+.info_textData h1{
+    font-size: 45px;
+    font-weight: 800;
+    font-family: var(--inter);
+}
+
+.info_textData h2{
+    font-family: var(--inter);
+    font-size: 20px;
+}
+
+.info_textData button
+{
+    border-radius: 20px;
+    width: 150px;
+    font-size: 20px;
+    padding: 10px 20px ;
+    color: white;
+    border: 0.5px solid gray;
+    background-color: var(--bg-color);
+    margin-top: 30px;
+}

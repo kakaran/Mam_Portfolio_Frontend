@@ -3,6 +3,9 @@
     border: 1px solid black;
     height: 90vh;
     overflow: hidden;
+    background-image: url(../../Image/bgimage.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 80vh;
 }
 
 .info_textData

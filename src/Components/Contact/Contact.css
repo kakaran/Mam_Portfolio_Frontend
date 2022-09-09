@@ -1,0 +1,85 @@
+.contact_container {
+    width: 90%;
+    margin: auto;
+    border: 1px solid black
+}
+
+.contact_container h3 {
+    color: var(--bg-color);
+    font-family: var(--inter);
+    font-size: 20px;
+    width: 120px;
+}
+
+.line {
+    border-bottom: 3px solid var(--bg-color);
+    width: 60px;
+    margin: 20px 0px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.contact_container h1 {
+    font-size: 38px;
+    font-weight: 800;
+    width: 535px;
+    font-family: (--inter);
+    margin-bottom: 30px;
+}
+
+.mail {
+    text-decoration: underline;
+}
+
+.info {
+    margin: 10px;
+}
+
+.info input {
+    height: 50px;
+    width: 99%;
+    outline: none;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: #ffff;
+    font-size: 20px;
+    font-family: var(--inter);
+}
+
+input:focus {
+    outline: none;
+}
+
+.go {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 98%;
+    margin-bottom: 30px;
+}
+
+.contact_container button {
+    border-radius: 20px;
+    width: 150px;
+    font-size: 20px;
+    padding: 10px 20px;
+    color: white;
+    border: 0.5px solid gray;
+    background-color: var(--bg-color);
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.arrow {
+    margin-top: 33px;
+    height: 30px;
+    width: 30px;
+    fill: var(--bg-color);
+}

@@ -17,14 +17,17 @@ export default function Dashboard() {
     resume
   }
 
+  console.log(admininformation);
   const handlesubmit = async () =>{
+    axios.defaults.headers = {
+      auth: localStorage.getItem("token"),
+    };
 
       const data  = await axios.post("http://localhost:4000/api/admin",admininformation).then((res)=>{
         console.log(res);
       }).catch((err) =>{
         console.log(err);
       })
-      console.log(data);
   }
 
 

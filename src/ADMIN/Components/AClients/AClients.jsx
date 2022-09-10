@@ -6,7 +6,9 @@ export default function AClients() {
   return (
     <div className='Aclient_Container'>
       <Sidebar/>
-      This is a AClients Page 
+      <div className="Aclient_form_container">
+          .
+      </div>
     </div>
   )
 }

@@ -32,7 +32,7 @@ export default function Sidebar({ children }) {
   return (
     <>
       <div className="Sidebar_container">
-        <motion.div animate={{ width: "200px" }} className="sidebar">
+        <motion.div animate={{ width: "230px" }} className="sidebar">
           <div className="header_name">
             <img src="" alt="" />
             <Link to="/Dashboard"><h1>name</h1></Link>

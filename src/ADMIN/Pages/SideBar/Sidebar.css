@@ -29,10 +29,9 @@
 }
 .sidebar
 {
-    background-color: #0353a4;    
-    color: white;
-    height: 100vh;
-    
+    background-color: white;    
+    color: black;
+    height: 100vh;   
 }
 a{
     text-decoration: none;
@@ -40,7 +39,7 @@ a{
 
 .routes
 {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     gap:30px;
@@ -58,7 +57,7 @@ a{
 .sidebar_route_icons
 {
     font-size: 30px ;
-    color: #b3c5d7;
+    color: var(--bg-color);
 }
 
 .sidebar_link_name

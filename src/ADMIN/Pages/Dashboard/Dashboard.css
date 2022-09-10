@@ -1,0 +1,90 @@
+.Dashboard_Container
+{
+    display:  flex;
+}
+
+.profile_container
+{
+    margin: 50px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.user_information
+{
+    display: flex;
+    border-bottom: 1px solid var(--second-bg-color);
+    align-items: center;
+    gap: 30px ;
+    padding: 10px 20px;
+}
+
+.user_information img
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* border: 1px solid black; */
+}
+
+.user_form
+{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.user_form_inputs
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 0px ;
+}
+
+.input_holder
+{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px ;
+}
+
+.input_holder label
+{
+    font-size: 17px ;
+    font-family: var(--inter);
+    padding: 0px 0px 5px 5px;
+}
+
+.input_holder input
+{
+    width: 350px;
+    font-size: 20px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: black;
+    border: 1px solid var(--second-bg-color);
+    outline: none;
+}
+
+.user_form button
+{
+    width: 200px;
+    padding: 12px 25px ;
+    font-size: 17px;
+    font-family: var(--inter);
+    border-radius: 20px;
+    font-size: bold;
+    background-color: white;
+    border: 1px solid var(--second-bg-color);
+}
+
+.user_form button:hover
+{
+    background-color: var(--bg-color);
+    color: white;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}

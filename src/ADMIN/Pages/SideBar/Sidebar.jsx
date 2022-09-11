@@ -1,12 +1,15 @@
-import React from 'react'
+import React,{ useState, useEffect} from 'react';
 import { motion } from "framer-motion";
 import { BiDetail,BiMessageSquareDetail } from 'react-icons/bi'
 import { HiOutlineUsers } from 'react-icons/hi'
 import { MdOutlineDesignServices } from 'react-icons/md'
 import { NavLink , Link} from 'react-router-dom';
+import axios from 'axios'
 import "./Sidebar.css"
 
 export default function Sidebar({ children }) {
+  // const [adminimage, setAdminimage] = useState()
+
   const routes = [
     {
       path: "/About",
@@ -29,6 +32,23 @@ export default function Sidebar({ children }) {
       icon: <BiMessageSquareDetail />
     },
   ]
+
+  // useEffect(() =>{
+      
+  //   async function fetchdata(){
+      
+  //     await axios.get("http://localhost:4000/api/admin",{}).then((res) => {
+  //     setAdminimage(res)
+  //     console.log(adminimage.data.name);
+  //     // console.log(res.request.response,"====",adminimage);
+  //     }).catch((err) =>{
+  //       console.log(err);
+  //     })
+  //   }
+    
+  //   fetchdata();
+  // },[])
+
   return (
     <>
       <div className="Sidebar_container">

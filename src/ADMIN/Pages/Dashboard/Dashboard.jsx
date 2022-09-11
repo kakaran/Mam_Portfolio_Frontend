@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React,{ useState, useEffect} from 'react';
 import Sidebar from '../SideBar/Sidebar';
 import axios from 'axios';
 import "./Dashboard.css"
@@ -9,6 +8,30 @@ export default function Dashboard() {
   const [avtarimage , setAvtarimage] = useState();
   const [homeimage , setHomeimage] = useState();
   const [resume , setResume] = useState();
+  const [admindetail, setAdminDetail] = useState([])
+
+  
+
+  useEffect(() =>{
+      
+    const  fetchdata = async() => {
+      
+      // await axios.get("http://localhost:4000/api/admin",{}).then((res) => {
+      //   console.log("itss working");
+      // setAdminDetail(res)
+      // console.log(admindetail);
+      // }).catch((err) =>{
+      //   console.log(err);
+      // })
+
+      const data =   (await axios.get("http://localhost:4000/api/admin",{})).data
+      console.log(data ,"its runing");
+      setAdminDetail(data);
+      console.log(admindetail);
+    }
+    
+    fetchdata();
+  },[])
 
   const admininformation = {
     name,
@@ -16,28 +39,28 @@ export default function Dashboard() {
     homeimage,
     resume
   }
-
-  console.log(admininformation);
   const handlesubmit = async () =>{
     axios.defaults.headers = {
       auth: localStorage.getItem("token"),
     };
 
-      const data  = await axios.post("http://localhost:4000/api/admin",admininformation).then((res)=>{
+      await axios.post("http://localhost:4000/api/admin",admininformation).then((res)=>{
         console.log(res);
+        window.location.reload();
       }).catch((err) =>{
         console.log(err);
       })
   }
 
+  
 
   return (
    <div className="Dashboard_Container">
    <Sidebar/>
    <div className="profile_container">
     <div className="user_information">
-      <img src="" alt="" />
-      <h1>name</h1>
+      <img src=""alt="" />
+      <h1></h1>
     </div>
     <div className="user_form">
       <div className="user_form_inputs">

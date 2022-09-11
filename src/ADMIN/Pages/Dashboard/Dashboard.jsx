@@ -8,7 +8,7 @@ export default function Dashboard() {
   const [avtarimage , setAvtarimage] = useState();
   const [homeimage , setHomeimage] = useState();
   const [resume , setResume] = useState();
-  const [admindetail, setAdminDetail] = useState([])
+  const [admindetail, setAdminDetail] = useState([{}])
 
   
 
@@ -26,7 +26,7 @@ export default function Dashboard() {
 
       const data =   (await axios.get("http://localhost:4000/api/admin",{})).data
       console.log(data ,"its runing");
-      setAdminDetail(data);
+      setAdminDetail(data[0]);
       console.log(admindetail);
     }
     
@@ -59,8 +59,8 @@ export default function Dashboard() {
    <Sidebar/>
    <div className="profile_container">
     <div className="user_information">
-      <img src=""alt="" />
-      <h1></h1>
+      <img src={admindetail.avtarimage}alt="" />
+      <h1>{admindetail.name}</h1>
     </div>
     <div className="user_form">
       <div className="user_form_inputs">

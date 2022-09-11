@@ -49,3 +49,13 @@
     background-color: var(--bg-color);
     margin-top: 30px;
 }
+
+.info_textData img 
+{
+    width : 270px;
+    height: 350px;
+    position: absolute;
+    right: 155px;
+    border-radius: 10px;
+    opacity: 0.9;
+}

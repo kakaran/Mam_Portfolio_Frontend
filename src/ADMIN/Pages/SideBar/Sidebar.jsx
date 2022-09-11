@@ -8,7 +8,7 @@ import axios from 'axios'
 import "./Sidebar.css"
 
 export default function Sidebar({ children }) {
-  // const [adminimage, setAdminimage] = useState()
+  const [adminimage, setAdminimage] = useState([{}])
 
   const routes = [
     {
@@ -33,29 +33,24 @@ export default function Sidebar({ children }) {
     },
   ]
 
-  // useEffect(() =>{
+  useEffect(() =>{
       
-  //   async function fetchdata(){
+    async function fetchdata(){
       
-  //     await axios.get("http://localhost:4000/api/admin",{}).then((res) => {
-  //     setAdminimage(res)
-  //     console.log(adminimage.data.name);
-  //     // console.log(res.request.response,"====",adminimage);
-  //     }).catch((err) =>{
-  //       console.log(err);
-  //     })
-  //   }
+      const data =  (await axios.get("http://localhost:4000/api/admin",{})).data
+      setAdminimage(data[0]);
+    }
     
-  //   fetchdata();
-  // },[])
+    fetchdata();
+  },[])
 
   return (
     <>
       <div className="Sidebar_container">
         <motion.div animate={{ width: "230px" }} className="sidebar">
           <div className="header_name">
-            <img src="" alt="" />
-            <Link to="/Dashboard"><h1>name</h1></Link>
+            <img src={adminimage.avtarimage} alt="" />
+            <Link to="/Dashboard"><h1>{adminimage.name}</h1></Link>
             </div>
           <div className="routes">
             {routes.map((route) => {

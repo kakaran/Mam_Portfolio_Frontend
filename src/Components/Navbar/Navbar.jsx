@@ -15,7 +15,7 @@ export default function Navbar() {
             <div className="navbar_logo">logo</div>
             <div className="navbar_links">
                 <Link onClick={() =>{setActiveValue("#")}} className = { activevalue === "#" ? "active" : " " } to= "" >About</Link>
-                <Link onClick={() =>{setActiveValue("#Service")}} className = { activevalue === "#Service" ? "active" : " " } to= "" >Service</Link>
+                <Link onClick={() =>{setActiveValue("#Service")}} className = { activevalue === "#Service" ? "active" : " " } to= "#footer" >Service</Link>
                 <Link onClick={() =>{setActiveValue("#Works")}} className = { activevalue === "#Works" ? "active" : " " } to= "" >Works</Link>
             </div>
             <div className="second_navbar_hamburger">

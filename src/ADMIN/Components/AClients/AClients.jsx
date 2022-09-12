@@ -42,7 +42,9 @@ export default function AClients() {
 
 
   const onDeleteClient = async () => {
-
+    axios.defaults.headers = {
+      auth: localStorage.getItem("token"),
+    };
     await axios.delete(`http://localhost:4000/api/Client/${_id}`).then((res) => {
       window.location.reload()
     }).catch((err) => {

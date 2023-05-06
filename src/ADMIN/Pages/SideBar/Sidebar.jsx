@@ -1,71 +1,84 @@
-import React,{ useState, useEffect} from 'react';
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { BiDetail,BiMessageSquareDetail } from 'react-icons/bi'
-import { HiOutlineUsers } from 'react-icons/hi'
-import { MdOutlineDesignServices } from 'react-icons/md'
-import { NavLink , Link} from 'react-router-dom';
-import axios from 'axios'
-import "./Sidebar.css"
+import { BiDetail, BiLogIn, BiMessageSquareDetail } from "react-icons/bi";
+import { HiOutlineUsers } from "react-icons/hi";
+import { MdOutlineDesignServices } from "react-icons/md";
+import { NavLink, Link } from "react-router-dom";
+import axios from "axios";
+import "./Sidebar.css";
 
 export default function Sidebar({ children }) {
-  const [adminimage, setAdminimage] = useState([{}])
+  const [adminimage, setAdminimage] = useState([]);
 
   const routes = [
     {
       path: "/About",
       name: "About",
-      icon: <BiDetail />
+      icon: <BiDetail />,
     },
     {
       path: "/Client",
       name: "Client",
-      icon: <HiOutlineUsers />
+      icon: <HiOutlineUsers />,
     },
     {
       path: "/Services",
       name: "Services",
-      icon: <MdOutlineDesignServices />
+      icon: <MdOutlineDesignServices />,
     },
     {
       path: "/Testimonials",
       name: "Testimonials",
-      icon: <BiMessageSquareDetail />
+      icon: <BiMessageSquareDetail />,
     },
-  ]
+  ];
 
-  useEffect(() =>{
-      
-    async function fetchdata(){
-      
-      const data =  (await axios.get("http://localhost:4000/api/admin",{})).data
-      setAdminimage(data[0]);
+  useEffect(() => {
+    async function fetchdata() {
+      try {
+        const data = (
+          await axios.get("http://localhost:4000/api/admin/Dashboard")
+        ).data;
+        await setAdminimage(data.Data[0]);
+        // console.log(data.Data[0]);
+      } catch (error) {
+        console.log(error);
+      }
     }
-    
+
     fetchdata();
-  },[])
+  }, []);
 
   return (
     <>
       <div className="Sidebar_container">
         <motion.div animate={{ width: "230px" }} className="sidebar">
           <div className="header_name">
-            <img src={adminimage.avtarimage} alt="" />
-            <Link to="/Dashboard"><h1>{adminimage.name}</h1></Link>
-            </div>
+            {adminimage._id && <img
+              src={`http://localhost:4000/api/admin/Dashboard/image/${adminimage?._id}`}
+              alt=""
+            />}
+            <Link to="/Dashboard">
+              <h1>{adminimage.name}</h1>
+            </Link>
+          </div>
           <div className="routes">
             {routes.map((route) => {
-              return(
-              <NavLink to={route.path} key={route.name} className="sidebar_link">
-                <div className="sidebar_route_icons">{route.icon}</div>
-                <div className="sidebar_link_name">{route.name}</div>
-              </NavLink>
-            )})}
+              return (
+                <NavLink
+                  to={route.path}
+                  key={route.name}
+                  className="sidebar_link"
+                >
+                  <div className="sidebar_route_icons">{route?.icon}</div>
+                  <div className="sidebar_link_name">{route?.name}</div>
+                </NavLink>
+              );
+            })}
           </div>
         </motion.div>
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
       </div>
     </>
-  )
+  );
 }

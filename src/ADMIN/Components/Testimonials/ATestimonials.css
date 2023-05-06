@@ -1,13 +1,11 @@
-.Aclient_Container
-{
-    display: flex;
+.TestimonialContainer {
+  display: flex;
     flex-direction: row;
     background-color: var(--second-bg-color);
 }
 
-.Aclient_form_container
-{
-    width: 100%;
+.TestimonialFormContainer {
+  width: 100%;
     border-radius: 10px;
     margin: 50px;
     background-color: white;
@@ -16,19 +14,20 @@
     flex-direction: row;
 }
 
-.Clients_form
+
+.Testimonial_form
 {
     padding: 20px;
     border-right: 1px solid var(--second-bg-color) ;
 }
 
-.Clients_form h1{
+.Testimonial_form h1{
     font-family: var(--inter);
     font-size: 25px;
     padding: 10px 0px ;
 }
 
-.Clients_form button
+.Testimonial_form button
 {
     width: 200px;
     padding: 12px 25px ;
@@ -40,53 +39,10 @@
     border: 1px solid var(--second-bg-color);
 }
 
-.Clients_form button:hover
+.Testimonial_form button:hover
 {
     background-color: var(--bg-color);
     color: white;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
-
-.delete_clients_form
-{
-    border-top: 1px solid var(--second-bg-color);
-    margin: 20px 0px; 
-}
-
-.table_heading
-{
-    padding: 20px ;
-    overflow-y: hidden;
-    width: 900px;
-    margin: auto;
-}
-
-th{
-    border: 1px solid white;
-    font-family: var(--inter);
-    background-color: black;
-    color:white;
-    padding: 8px 0px;
-}
-
-td{
-    text-align: center;
-    background-color: var(--second-bg-color);
-    padding: 10px 0px ;
-    font-size: 20px;
-}
-
-td:nth-child(3){
-width: 200px;
-}
-
-
-td:nth-child(3) img{
-    width: 150px;
-    height: 100px;
-}
-
-td:nth-child(4){
-    font-size: 30px;
 }

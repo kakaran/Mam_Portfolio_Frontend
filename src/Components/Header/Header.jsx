@@ -11,7 +11,7 @@ export default function Header() {
     async function fetchdata(){
       
       const data =  (await axios.get("http://localhost:4000/api/admin",{})).data
-      setUserimage(data[0]);
+      // setUserimage(data[0]);
     }
     
     fetchdata();
